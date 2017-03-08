@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: location-service
+  freemarker:
+     enabled: false
+  thymeleaf:
+     cache: false
+     prefix: classpath:/location-server/templates
+server:
+  port: 2222
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka
+  instance:
+    leaseRenewalIntervalInSeconds : 3

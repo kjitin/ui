@@ -1,0 +1,18 @@
+spring:
+ application:
+  name: web-server
+ freemarker:
+   enabled: false
+ thymeleaf:
+   cache: false
+   prefix: classpath:/web-server/templates
+
+server:
+ port: 4444
+
+eureka:
+ client:
+  serviceUrl:
+    defaultZone: http://localhost:1111/eureka
+ instance:
+    leaseRenewalIntervalInSeconds : 3
