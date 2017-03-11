@@ -32,7 +32,7 @@ public class WebServer {
 
     @Bean
     public WebLocationService webLocationService(){
-        return new WebLocationService(LOCATION_SERVICE);
+        return new WebLocationService(LOCATION_SERVICE,CATALOG_SERVICE);
     }
 
     @Bean

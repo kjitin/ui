@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<body>
+<h1>Accounts by Name</h1>
+<div th:if="not ${channelList}" class="error">
+
+    <div style="height: 2cm">&nbsp;</div>
+</div>
+
+<div th:if="${channelList}">
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Channel </th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="channel : ${channelList}">
+            <td><a href="account.html"
+                   th:href="@{|/channelList/${channel.channelName}|}"
+                   th:text="|${channel.channelName}|">11111111</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

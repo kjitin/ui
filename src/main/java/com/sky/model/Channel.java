@@ -1,8 +1,18 @@
 package com.sky.model;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 /**
  * Created by Jitin on 06/03/2017.
  */
+@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS,
+                     include = JsonTypeInfo.As.PROPERTY,
+                 property = "type")
+@JsonSubTypes({
+  @JsonSubTypes.Type(value = SportsChannel.class),
+  @JsonSubTypes.Type(value = NewsChannel.class)
+})
 public abstract class Channel {
 
     protected String channelName;
@@ -31,10 +41,4 @@ public abstract class Channel {
         return channelName.hashCode();
     }
 
-    @Override
-    public String toString() {
-        return "Channel{" +
-                "channelName='" + channelName + '\'' +
-                '}';
-    }
 }

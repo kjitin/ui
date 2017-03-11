@@ -6,6 +6,7 @@ package com.sky.model;
 public class SportsChannel extends Channel {
 
 
+    public SportsChannel(){}
     public SportsChannel(String channelName, Location location){
         this.channelName = channelName;
         this.location = location;
@@ -28,6 +29,6 @@ public class SportsChannel extends Channel {
 
     @Override
     public String toString() {
-        return "SportsChannel{"+"channel = "+ getChannelName()+" location = "+location+" }";
+        return "{channel:"+ getChannelName()+",location: "+location+" }";
     }
 }

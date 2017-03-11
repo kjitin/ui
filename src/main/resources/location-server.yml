@@ -5,7 +5,7 @@ spring:
      enabled: false
   thymeleaf:
      cache: false
-     prefix: classpath:/location-server/templates
+     prefix: classpath:/location-server/templates/
 server:
   port: 2222
 

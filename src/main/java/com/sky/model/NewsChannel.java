@@ -6,6 +6,8 @@ package com.sky.model;
 public class NewsChannel extends Channel{
 
 
+    public NewsChannel(){}
+
     public NewsChannel(String channelName){
         this.channelName = channelName;
         this.location = new Location("default");
@@ -19,5 +21,10 @@ public class NewsChannel extends Channel{
     @Override
     public Location getLocation() {
         return location;
+    }
+
+    @Override
+    public String toString() {
+        return "{channel:"+ getChannelName()+",location: "+location+" }";
     }
 }

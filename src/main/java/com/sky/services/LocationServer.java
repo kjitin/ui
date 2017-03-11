@@ -1,6 +1,6 @@
 package com.sky.services;
 
-import com.sky.ChannelConfig;
+import com.sky.controller.ControllerConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 
 @EnableAutoConfiguration
 @EnableDiscoveryClient
-@Import(ChannelConfig.class)
+@Import(ControllerConfig.class)
 public class LocationServer {
 
 

@@ -9,6 +9,7 @@ public class Location {
     private String locationId;
 
 
+    public Location(){}
 
     public Location(String locationId){
         this.locationId = locationId;
@@ -40,8 +41,6 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
-                "locationId='" + locationId + '\'' +
-                '}';
+        return "{locationId:" + locationId + "}";
     }
 }
